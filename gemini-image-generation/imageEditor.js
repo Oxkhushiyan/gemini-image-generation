@@ -22,7 +22,7 @@ async function modifyImage() {
   };
 
   // Prompt for modifying the image
-  const prompt = "Please modify this image to add a apple and make it more vibrant with colors."; // Customize this prompt
+  const prompt = "Please modify this image to add a reliastic dog on bed"; // Customize this prompt
   
   const model = genAI.getGenerativeModel({
     model: "gemini-2.0-flash-exp",
@@ -40,7 +40,7 @@ async function modifyImage() {
       } else if (part.inlineData) {
         const imageData = part.inlineData.data;
         const buffer = Buffer.from(imageData, "base64");
-        fs.writeFileSync("gemini-modified-image-3.png", buffer);
+        fs.writeFileSync("gemini-edited-image-4.png", buffer);
         console.log("Modified image saved as gemini-modified-image.png");
       }
     }
